@@ -1,6 +1,6 @@
 {
     "name": "mgrechanik/kruskal",
-    "description": "The implementation of the Ant colony optimization algorithm",
+    "description": "The implementation of the Kruskal's algorithm to find a minimum spanning tree",
     "type": "library",
     "keywords": ["Kruskal's algorithm", "Minimum spanning tree", "Kruskal", "minimum weight spanning tree", "Search algorithm", 
         "path planning", "graph", "Minimum-cost subgraph", "mst", "php"],
