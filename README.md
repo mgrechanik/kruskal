@@ -2,8 +2,8 @@
 
 ## Demo <span id="demo"></span>
 
-Building a minimum spanning tree on this graph:
-![Using this ACO library to solve the travelling salesman problem](https://raw.githubusercontent.com/mgrechanik/kruskal/main/docs/dots.jpg "Using this ACO library to solve the travelling salesman problem")
+Example of building a minimum spanning tree:
+![Example of building a minimum spanning tree with kruskal's algorithm](https://raw.githubusercontent.com/mgrechanik/kruskal/main/docs/kruskal.jpg "Example of building a minimum spanning tree with kruskal's algorithm")
 
 ## Installing <span id="installing"></span>
 
