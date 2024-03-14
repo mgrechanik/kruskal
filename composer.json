@@ -1,8 +1,8 @@
 {
     "name": "mgrechanik/kruskal",
-    "description": "The implementation of the Kruskal's algorithm to find a minimum spanning tree",
+    "description": "The implementation of the Kruskal algorithm to find a minimum spanning tree",
     "type": "library",
-    "keywords": ["Kruskal's algorithm", "Minimum spanning tree", "Kruskal", "minimum weight spanning tree", "Search algorithm", 
+    "keywords": ["Kruskal algorithm", "Minimum spanning tree", "Kruskal", "minimum weight spanning tree", "Search algorithm", 
         "path planning", "graph", "Minimum-cost subgraph", "mst", "php"],
     "license": "BSD-3-Clause",
     "autoload": {
