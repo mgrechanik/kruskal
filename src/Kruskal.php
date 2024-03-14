@@ -25,17 +25,17 @@ namespace mgrechanik\kruskal;
  * ```
  *
  * @author Mikhail Grechanik <mike.grechanik@gmail.com>
- * @since 1.0.1 
+ * @since 1.0.0 
  */
 class Kruskal
 {
     /**
-     * @var array Adjacency matrix. It is a source data representing our graph
+     * @var array The Adjacency matrix. It is a source data representing our graph
      */
     protected array $matrix;
     
     /**
-     * @var array Trees we build in a graph
+     * @var array The trees we build in a graph
      */
     protected array $trees = [];
 

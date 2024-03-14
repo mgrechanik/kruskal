@@ -13,7 +13,7 @@ namespace mgrechanik\kruskal\tests;
 
 use mgrechanik\kruskal\Kruskal;
 use Yoast\PHPUnitPolyfills\Helpers\AssertAttributeHelper;
-use LogicException;
+use InvalidArgumentException;
 
 class KruskalTest extends \PHPUnit\Framework\TestCase
 {
@@ -21,19 +21,19 @@ class KruskalTest extends \PHPUnit\Framework\TestCase
     
     public function testCreatingSmallMatrix() {
         $matrix = [1];
-        $this->expectException(LogicException::class);
+        $this->expectException(InvalidArgumentException::class);
         $kruskal = new Kruskal($matrix);
     }     
     
     public function testCreatingWrongMatrixFormat() {
         $matrix = [1 => [1,1], 2 => [1,1]];
-        $this->expectException(LogicException::class);
+        $this->expectException(InvalidArgumentException::class);
         $kruskal = new Kruskal($matrix);
     } 
     
     public function testCreatingWrongMatrixFormat2() {
         $matrix = [[1,1],[1=>1,2=>2]];
-        $this->expectException(LogicException::class);
+        $this->expectException(InvalidArgumentException::class);
         $kruskal = new Kruskal($matrix);
     }     
     
