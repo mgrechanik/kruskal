@@ -46,7 +46,6 @@ class KruskalTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(157, $order[0]['distance']);
         $this->assertEquals(184, $order[1]['distance']);
         $this->assertEquals(335, $order[5]['distance']);
-        
     }    
     
     public function testOrderWhenWeHaveEquals() {
@@ -56,7 +55,40 @@ class KruskalTest extends \PHPUnit\Framework\TestCase
         $kruskal = new Kruskal($matrix);
         $order = $kruskal->buildAscendingOrder();
         $this->assertCount(6, $order);
-    }        
+    }     
+    
+    public function testRunDistance() {
+        $matrix = $this->getMatrix();
+        $kruskal = new Kruskal($matrix);
+        $this->assertNull($kruskal->getDistance());
+        $run = $kruskal->run();
+        $this->assertTrue($run);
+        //$tree = $kruskal->getMinimumSpanningTree();
+        $this->assertEquals(600, $kruskal->getDistance());
+        $this->assertEquals(600, $kruskal->getDistance());
+    }
+    
+    public function testRunTree() {
+        $matrix = $this->getMatrix();
+        $kruskal = new Kruskal($matrix);
+        $kruskal->run();
+        $tree = $kruskal->getMinimumSpanningTree();
+        $this->assertCount(3, $tree);
+        $this->assertEquals(0, $tree[0][0]);
+        $this->assertEquals(2, $tree[0][1]);
+        $this->assertEquals(2, $tree[1][0]);
+        $this->assertEquals(3, $tree[1][1]);
+        $this->assertEquals(1, $tree[2][0]);
+        $this->assertEquals(3, $tree[2][1]);
+    }    
+    
+    public function testRunSmallerTree() {
+        $matrix = $this->getMatrixSmaller();
+        $kruskal = new Kruskal($matrix);
+        $kruskal->run();
+        $tree = $kruskal->getMinimumSpanningTree();
+        $this->assertCount(2, $tree);
+    }     
 
 
     protected function getMatrix() {
@@ -66,7 +98,15 @@ class KruskalTest extends \PHPUnit\Framework\TestCase
             [184, 287,  0 , 259],
             [335, 157, 259,  0]
         ];
-    }    
+    }   
+    
+    protected function getMatrixSmaller() {
+        return [
+            [ 0 , 263, 184],
+            [263,  0 , 287],
+            [184, 287,  0 ]
+        ];
+    }     
     
     /*
     public function testCreating() {
