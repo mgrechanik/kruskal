@@ -74,3 +74,7 @@ Array
 ```
 600
 ```
+
+This code will find the next path:
+
+![minimum spanning tree](https://raw.githubusercontent.com/mgrechanik/kruskal/main/docs/democode.jpg "minimum spanning tree")
