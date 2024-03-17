@@ -34,7 +34,7 @@ $matrix = [
     [184, 287,  0 , 259],
     [335, 157, 259,  0]
 ];
-
+$kruskal = new Kruskal($matrix);
 if ($kruskal->run()) {
     // 1)
     var_dump($kruskal->getMinimumSpanningTree());
